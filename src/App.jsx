@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(1);
   const [name, setName] = useState("");
 
   return (
-    <div className="w-[40%] p-8 mx-auto">
+    <div className="lg:w-[40%] p-8 mx-auto">
       <div className="">
         <img src="/roqqu-white.svg" alt="" />
         <div className="mt-8">
@@ -189,7 +189,40 @@ function App() {
                   </div>
                 );
               case 4:
-                return <div>Hello world 4</div>;
+                return (
+                  <div>
+                    <h1 class="text-3xl mt-6 font-bold text-white">
+                      <span>Thank You {name} </span>👋🏽
+                      <br />
+                      Let's have your email
+                    </h1>
+                    <div className="my-4">
+                      <div>
+                        <div>
+                          <input
+                            type="email"
+                            className="border p-3 w-full bg-transparent rounded-md my-2 border input text-sm"
+                            placeholder="eg. johndoe@gamil.com"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <button
+                          class="btn w-full p-3 rounded-md text-sm mt-8 text-white font-bold"
+                          onClick={() => setCount(count + 1)}
+                        >
+                          <span>Continue</span>
+                        </button>
+                        <div className="text-white mt-6 text-sm">
+                          Already have an account?{" "}
+                          <a href="" className="text-blue-400">
+                            Sign In
+                          </a>
+                        </div>
+                      </div>{" "}
+                    </div>
+                  </div>
+                );
               case 5:
                 return (
                   <div>
